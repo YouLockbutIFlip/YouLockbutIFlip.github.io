@@ -157,25 +157,32 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('../images/tailgate.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     color: var(--light-text);
     text-align: center;
+    position: relative;
+    padding-bottom: 60px;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
     font-weight: 700;
 }
 
@@ -189,6 +196,72 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-bottom: 40px;
+}
+
+.project-overview {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    text-align: left;
+}
+
+.project-overview p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.project-overview p:last-child {
+    margin-bottom: 0;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.resource-buttons {
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.resource-buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.resource-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-text);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px 15px;
+    min-width: 120px;
+    transition: var(--transition);
+}
+
+.resource-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    color: var(--light-text);
+}
+
+.resource-button i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.resource-button span {
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 /* Section Styles */
