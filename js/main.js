@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Video buttons functionality
+    const videoButtons = document.querySelectorAll('.video-btn');
+    const videoPlayer = document.getElementById('video-player');
+    
+    if (videoButtons.length > 0 && videoPlayer) {
+        videoButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                videoButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get video ID from data attribute
+                const videoId = this.getAttribute('data-video');
+                
+                // Update iframe src
+                videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+            });
+        });
+    }
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
