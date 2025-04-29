@@ -12,11 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add active class to clicked button
                 this.classList.add('active');
                 
-                // Get video ID from data attribute
+                // Get video ID and title from data attributes
                 const videoId = this.getAttribute('data-video');
+                const videoTitle = this.getAttribute('data-title');
                 
-                // Update iframe src
+                // Update iframe src and title
                 videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+                videoPlayer.title = videoTitle;
             });
         });
     }
