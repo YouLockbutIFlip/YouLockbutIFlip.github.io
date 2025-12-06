@@ -314,6 +314,37 @@ nav ul li a:hover::after {
     color: var(--light-text);
 }
 
+/* Attack Scenario Section */
+.attack-scenario-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.attack-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.attack-images figure {
+    flex: 1;
+}
+
+.attack-caption {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--gray-color);
+}
+
+.attack-images img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
 /* Overview Section */
 .overview-content {
     display: flex;
@@ -637,6 +668,15 @@ footer {
     
     .video-btn {
         width: auto;
+    }
+    
+    /* Attack Scenario responsive styling */
+    .attack-images {
+        flex-direction: column;
+    }
+
+    .attack-images img {
+        height: 200px;
     }
     
     /* Navigation responsive styling */
